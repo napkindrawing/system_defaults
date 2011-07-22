@@ -96,7 +96,9 @@ function compile_and_install_redis {
     cd /usr/local/src/redis-$REDIS_RELEASE
     make PREFIX=$REDIS_PREFIX
     # make test
-    make install
+    mkdir -p $REDIS_PREFIX/bin
+    cp src/redis-{cli,server,benchmark,check-aof,check-dump} $REDIS_PREFIX/bin
+    # make install
 }
 
 function set_default_environment {

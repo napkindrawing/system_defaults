@@ -38,6 +38,7 @@ au BufNewFile,BufRead *.html set ts=2
 au BufNewFile,BufRead *.xml set shiftwidth=2
 au BufNewFile,BufRead *.xml set textwidth=0
 au BufNewFile,BufRead *.css set shiftwidth=2
+au BufNewFile,BufRead *.god set ft=ruby
 
 " autoindent for c, html, perl, and php
 au BufNewFile,BufRead *.priv,*.pl,*.cgi,*.php*,*.*html*,*.c set autoindent shiftwidth=4 ts=4
@@ -51,3 +52,5 @@ au BufNewFile,BufRead *.xhtml set syntax=html
 set nowrap
 set number
 autocmd FileType perl :noremap K :!perldoc <cword> <bar><bar> perldoc -f <cword><cr>
+
+colorscheme desert

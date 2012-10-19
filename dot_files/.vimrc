@@ -24,30 +24,9 @@ set noautochdir
 set t_kb=^V<BS>
 fixdel
 
-au BufNewFile,BufRead *.phtml set ft=php  " vim gets confused, i use
-                                          " .phtml for php
-au BufNewFile,BufRead *.priv set ft=php   " vim gets confused, i use
-                                          " .priv for php
-au BufNewFile,BufRead *.tmpl set ft=html  " vim gets confused, i use
-                                          " .priv for php
-au BufNewFile,BufRead *.jsp set shiftwidth=2
-au BufNewFile,BufRead *.jsp set textwidth=0
-au BufNewFile,BufRead *.html set textwidth=0
-au BufNewFile,BufRead *.html set shiftwidth=2
-au BufNewFile,BufRead *.html set ts=2
-au BufNewFile,BufRead *.xml set shiftwidth=2
-au BufNewFile,BufRead *.xml set textwidth=0
-au BufNewFile,BufRead *.css set shiftwidth=2
+au BufNewFile,BufRead *.html,*.rb,*.js,*.css,*.scss,*.xml set ts=2 sw=2 expandtab 
+au BufNewFile,BufRead *.php set ts=8 sw=8 noexpandtab
 au BufNewFile,BufRead *.god set ft=ruby
-
-" autoindent for c, html, perl, and php
-au BufNewFile,BufRead *.priv,*.pl,*.cgi,*.php*,*.*html*,*.c set autoindent shiftwidth=4 ts=4
-au BufNewFile,BufRead *.js,*.tmpl,*.css set autoindent
-
-" cvs commit messages get wrapped at 68 and tabs get expanded
-au BufNewFile,BufRead /tmp/cvs* set tw=68 et
-
-au BufNewFile,BufRead *.xhtml set syntax=html
 
 set nowrap
 set number

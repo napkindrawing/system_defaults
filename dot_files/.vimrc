@@ -33,3 +33,5 @@ set number
 autocmd FileType perl :noremap K :!perldoc <cword> <bar><bar> perldoc -f <cword><cr>
 
 colorscheme desert
+
+set whichwrap+=<,>,h,l,[,]
